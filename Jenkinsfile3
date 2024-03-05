@@ -3,22 +3,22 @@ pipeline{
     stages{
         stage('checkout the code from github'){
             steps{
-                 git url: 'https://github.com/akshu20791/DevOpsClassCodes/'
+                 git url: 'https://github.com/chikku4609/Banking-java-project/'
                  echo 'github url checkout'
             }
         }
-        stage('codecompile with akshat'){
+        stage('codecompile with subbu'){
             steps{
                 echo 'starting compiling'
                 sh 'mvn compile'
             }
         }
-        stage('codetesting with akshat'){
+        stage('codetesting with subbu'){
             steps{
                 sh 'mvn test'
             }
         }
-        stage('qa with akshat'){
+        stage('qa with subbu'){
             steps{
                 mvn sonar:sonar \
                 -Dsonar.projectKey=myproject \
@@ -28,7 +28,7 @@ pipeline{
         }
 
 
-        stage('package with akshat'){
+        stage('package with subbu'){
             steps{
                 sh 'mvn package'
             }
